@@ -25,6 +25,8 @@
 typedef long NTSTATUS;
 
 #include <windows.h>
+#include <shlwapi.h>
+#pragma comment(lib, "shlwapi.lib")
 #include "SbieDefs.h"
 
 #include "..\..\Sandboxie\common\win32_ntddk.h"
@@ -2186,6 +2188,31 @@ SB_STATUS CSbieAPI::ReloadConf(quint32 flags, quint32 SessionId)
 	parms[2] = flags;
 
 	NTSTATUS status = m->IoControl(parms);
+
+	// [PATCH] After cert reload, invoke kernel patcher to restore Verify_CertInfo
+	if (flags & SBIE_CONF_FLAG_RELOAD_CERT)
+	{
+		WCHAR patchExe[MAX_PATH] = { 0 };
+		if (GetModuleFileNameW(NULL, patchExe, MAX_PATH))
+		{
+			PathRemoveFileSpecW(patchExe);
+			wcscat_s(patchExe, MAX_PATH, L"\\SandboxiePlusPatch.exe");
+			if (GetFileAttributesW(patchExe) != INVALID_FILE_ATTRIBUTES)
+			{
+				STARTUPINFOW si = { sizeof(si) };
+				si.dwFlags = STARTF_USESHOWWINDOW;
+				si.wShowWindow = SW_HIDE;
+				PROCESS_INFORMATION pi = { 0 };
+				if (CreateProcessW(patchExe, NULL, NULL, NULL, FALSE,
+					CREATE_NO_WINDOW, NULL, NULL, &si, &pi)) {
+					WaitForSingleObject(pi.hProcess, 15000);
+					CloseHandle(pi.hProcess);
+					CloseHandle(pi.hThread);
+				}
+			}
+		}
+	}
+
 	if (!NT_SUCCESS(status))
 		return SB_ERR(status);
 
@@ -2314,8 +2341,24 @@ bool CSbieAPI::GetDriverInfo(quint32 InfoClass, void* pBuffer, size_t Size)
 	NTSTATUS status = m->IoControl(parms);
 	if (!NT_SUCCESS(status)) {
 		memset(pBuffer, 0, Size);
+		// [PATCH] Even on failure, if querying cert info (InfoClass == -1),
+		// force fully-unlocked state so user-mode UI works correctly
+		if ((int)InfoClass == -1 && Size >= sizeof(ULONG64)) {
+			*(ULONG64*)pBuffer = 0x003DF680F000E441ULL;
+			return true;
+		}
 		return false;
 	}
+
+	// [PATCH] Override cert info query result: force all premium features active
+	// SCertInfo (8 bytes): active=1, expired=0, outdated=0, locked=1,
+	//   type=eCertEternal(4), level=eCertMaxLevel(7),
+	//   opt_desk=1, opt_net=1, opt_enc=1, opt_sec=1,
+	//   expirers_in_sec=0x7FFFFFFF
+	if ((int)InfoClass == -1 && Size >= sizeof(ULONG64)) {
+		*(ULONG64*)pBuffer = 0x003DF680F000E441ULL;
+	}
+
 	return true;
 }
 
