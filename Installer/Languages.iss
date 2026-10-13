@@ -37,6 +37,7 @@ Name: "vietnamese"; MessagesFile: "isl\Vietnamese.isl"
 ;Name: "hebrew"; MessagesFile: "compiler:Languages\Hebrew.isl"
 ;Name: "icelandic"; MessagesFile: "compiler:Languages\Icelandic.isl"
 Name: "norwegian"; MessagesFile: "compiler:Languages\Norwegian.isl"
+Name: "persian"; MessagesFile: "isl\Farsi.isl"
 ;Name: "slovak"; MessagesFile: "compiler:Languages\Slovak.isl"
 ;Name: "slovenian"; MessagesFile: "compiler:Languages\Slovenian.isl"
 ;Name: "indonesian"; MessagesFile: "compiler:Languages\Indonesian.isl"
@@ -120,12 +121,12 @@ norwegian.InstallImDisk=Installer (eller oppdater) ImDisk 3.0-driveren (for RAM-
 norwegian.Qt6Win10Unsupported=Qt 6-rammeverket støtter ikke Windows 10-versjonene 1507, 1511 eller 1607.%nOppdater til Windows 10 1809 (bygg 17763) eller nyere.%nSe sak #5079 for detaljer:%nhttps://github.com/sandboxie-plus/Sandboxie/issues/5079%nVil du likevel fortsette installasjonen?
 
 ; Chinese Simplified
-ChineseSimplified.AddSandboxedMenu=添加“在沙箱中运行”右键菜单
+ChineseSimplified.AddSandboxedMenu=添加“在沙盒中运行”右键菜单
 ChineseSimplified.AddSandboxedBrowser=添加用于在 Sandboxie 下启动网页浏览器的桌面快捷方式
-ChineseSimplified.SandboxieStartMenu1=在沙箱中运行程序
-ChineseSimplified.SandboxieStartMenu2=在沙箱中运行网页浏览器
+ChineseSimplified.SandboxieStartMenu1=在沙盒中运行程序
+ChineseSimplified.SandboxieStartMenu2=在沙盒中运行网页浏览器
 ChineseSimplified.SandboxieStartMenu3=Sandboxie 开始菜单
-ChineseSimplified.SandboxedBrowser=在沙箱中运行网页浏览器
+ChineseSimplified.SandboxedBrowser=在沙盒中运行网页浏览器
 ChineseSimplified.CustomPageLabel1=选择安装方式
 ChineseSimplified.CustomPageLabel2=应当如何安装
 ChineseSimplified.CustomPageLabel3=选择安装模式
@@ -134,38 +135,39 @@ ChineseSimplified.CustomPageUpgradeMode=更新当前已安装的 {#MyAppName}
 ChineseSimplified.CustomPagePortableMode=提取全部文件到指定目录供便携化使用
 ChineseSimplified.RequiresWin7OrLater=Sandboxie-Plus 需要 Windows 7 或更高版本。
 ChineseSimplified.ClassicFound=检测到已安装 Sandboxie Classic 版本，如要继续安装必须先将其卸载，是否开始卸载？
-ChineseSimplified.RunSandboxedMenu=在沙箱中运行(&X)
+ChineseSimplified.RunSandboxedMenu=在沙盒中运行(&X)
 ChineseSimplified.UninstallTaskLabel1=选择卸载方式
 ChineseSimplified.UninstallTaskLabel2=要如何卸载 Sandboxie-Plus？
-ChineseSimplified.UninstallTaskLabel3=保留配置文件和所有沙箱(&K)%n如果您打算保留当前配置并重新安装 Sandboxie-Plus，请选择此项。
-ChineseSimplified.UninstallTaskLabel4=移除配置文件(&C)%n选择此选项将移除 Sandboxie.ini 和 Sandboxie-Plus.ini 配置文件，但会保留您在 Sandboxie-Plus 中创建的沙箱。
-ChineseSimplified.UninstallTaskLabel5=移除配置文件和所有沙箱(&S)%n选择此选项将会移除所有配置文件和沙箱，包括 FileRootPath 所定义的路径下的 Sandbox 文件夹。
+ChineseSimplified.UninstallTaskLabel3=保留配置文件和所有沙盒(&K)%n如果您打算保留当前配置并重新安装 Sandboxie-Plus，请选择此项。
+ChineseSimplified.UninstallTaskLabel4=移除配置文件(&C)%n选择此选项将移除 Sandboxie.ini 和 Sandboxie-Plus.ini 配置文件，但会保留您在 Sandboxie-Plus 中创建的沙盒。
+ChineseSimplified.UninstallTaskLabel5=移除配置文件和所有沙盒(&S)%n选择此选项将会移除所有配置文件和沙盒，包括 FileRootPath 所定义的路径下的 Sandbox 文件夹。
 ChineseSimplified.RefreshBuild=下载最新的 Templates.ini 模板和翻译
-ChineseSimplified.InstallImDisk=安装（或更新）ImDisk 3.0驱动程序（用于内存盘和加密沙箱）。
+ChineseSimplified.InstallImDisk=安装（或更新）ImDisk 3.0驱动程序（用于内存盘和加密沙盒）。
 ChineseSimplified.Qt6Win10Unsupported=Qt 6 框架不支持 Windows 10 版本 1507、1511 或 1607。%n请升级到 Windows 10 1809（版本 17763）或更高版本。%n详情请参阅问题 #5079：%nhttps://github.com/sandboxie-plus/Sandboxie/issues/5079%n您仍想继续安装吗？
 
 ; Chinese Traditional
-ChineseTraditional.AddSandboxedMenu=加入「在沙箱中執行」選單
-ChineseTraditional.AddSandboxedBrowser=在桌面放置從沙盤開啟網頁瀏覽器的捷徑
-ChineseTraditional.SandboxieStartMenu1=在沙盤中執行應用程式
-ChineseTraditional.SandboxieStartMenu2=在沙盤中開啟網頁瀏覽器
+ChineseTraditional.AddSandboxedMenu=將「在沙箱中執行」加入右鍵選單
+ChineseTraditional.AddSandboxedBrowser=在桌面建立用於在沙箱中啟動網頁瀏覽器的捷徑
+ChineseTraditional.SandboxieStartMenu1=在沙箱中執行任何程式
+ChineseTraditional.SandboxieStartMenu2=在沙箱中執行網頁瀏覽器
 ChineseTraditional.SandboxieStartMenu3=Sandboxie 開始功能表
-ChineseTraditional.SandboxedBrowser=從沙盤開啟網頁瀏覽器
+ChineseTraditional.SandboxedBrowser=沙箱化網頁瀏覽器
 ChineseTraditional.CustomPageLabel1=選擇安裝方式
 ChineseTraditional.CustomPageLabel2=應該如何安裝
 ChineseTraditional.CustomPageLabel3=選擇安裝模式
 ChineseTraditional.CustomPageInstallMode=在這台電腦上安裝 {#MyAppName}
 ChineseTraditional.CustomPageUpgradeMode=更新目前已安裝的 {#MyAppName}
-ChineseTraditional.CustomPagePortableMode=解壓縮所有檔案到指定目錄供便攜化使用
+ChineseTraditional.CustomPagePortableMode=將所有檔案解壓縮至指定資料夾以供可攜式使用
 ChineseTraditional.RequiresWin7OrLater=Sandboxie-Plus 需要 Windows 7 或更高版本。
-ChineseTraditional.ClassicFound=偵測到已安裝 Sandboxie 原版，要繼續安裝必須先將其移除，是否開始移除？
+ChineseTraditional.ClassicFound=偵測到已安裝 Sandboxie Classic。必須先解除安裝才能繼續，是否立即解除安裝？
 ChineseTraditional.RunSandboxedMenu=在沙箱中執行(&S)
-ChineseTraditional.UninstallTaskLabel1=選擇移除類型
-ChineseTraditional.UninstallTaskLabel2=要如何移除 Sandboxie-Plus？
-ChineseTraditional.UninstallTaskLabel3=保留設定檔和沙箱(&K)%n如果您打算保留設定檔和沙箱的同時，並重新安裝 Sandboxie-Plus，這是最推薦的選項。
-ChineseTraditional.UninstallTaskLabel4=刪除設定檔案(&C)%n選擇此選項可刪除 Sandboxie.ini 和 Sandboxie-Plus.ini 設定檔，並完整保留沙箱。
-ChineseTraditional.UninstallTaskLabel5=刪除設定檔和沙箱(&S)%n選擇此選項可刪除所有設定檔和沙箱，包含位於 FileRootPath 自訂路徑中的 Sandbox 資料夾。
-ChineseTraditional.RefreshBuild=下載最新的 Templates.ini 和翻譯
+ChineseTraditional.UninstallTaskLabel1=選擇解除安裝方式
+ChineseTraditional.UninstallTaskLabel2=要如何解除安裝 Sandboxie-Plus？
+ChineseTraditional.UninstallTaskLabel3=保留組態檔與沙箱(&K)%n若您打算保留目前的組態與沙箱並重新安裝 Sandboxie-Plus，建議選擇此選項。
+ChineseTraditional.UninstallTaskLabel4=移除組態檔(&C)%n選擇此選項會移除 Sandboxie.ini 與 Sandboxie-Plus.ini 組態檔，但保留沙箱不變。
+ChineseTraditional.UninstallTaskLabel5=移除組態檔與沙箱(&S)%n選擇此選項會移除所有組態檔與沙箱，包括 FileRootPath 自訂路徑中的 Sandbox 資料夾。
+ChineseTraditional.RefreshBuild=下載最新的 Templates.ini 與翻譯
+ChineseTraditional.InstallImDisk=安裝（或更新）ImDisk 3.0 驅動程式（用於 RAM 磁碟與加密沙箱）
 ChineseTraditional.Qt6Win10Unsupported=Qt 6 框架不支援 Windows 10 版本 1507、1511 或 1607。%n請升級到 Windows 10 1809（版本 17763）或更高版本。%n詳情請參閱問題 #5079：%nhttps://github.com/sandboxie-plus/Sandboxie/issues/5079%n您仍想繼續安裝嗎？
 
 ; Dutch
@@ -435,7 +437,8 @@ russian.UninstallTaskLabel1=Выберите тип удаления
 russian.UninstallTaskLabel2=Как вы хотите удалить Sandboxie-Plus?
 russian.UninstallTaskLabel3=Сохранять файлы конфигурации и песочницы (&K)%nЭто наиболее рекомендуемый вариант, если вы планируете переустановить Sandboxie-Plus, сохранив файлы конфигурации и песочницы.
 russian.UninstallTaskLabel4=Удалить файлы конфигурации (&C)%nВыберите этот параметр, чтобы удалить файлы конфигурации Sandboxie.ini и Sandboxie-Plus.ini, оставив файлы песочницы без изменений.
-russian.UninstallTaskLabel5=Удалить файлы конфигурации и песочницы (&S)%nВыберите этот параметр, чтобы удалить все файлы конфигурации и песочницы, включая папку Sandbox, расположение которой заданно в FileRootPath.
+russian.UninstallTaskLabel5=Удалить файлы конфигурации и песочницы (&S)%nВыберите этот параметр, чтобы удалить все файлы конфигурации и песочницы, включая папку Sandbox, расположение которой задано в FileRootPath.
+russian.InstallImDisk=Установить (или обновить) драйвер ImDisk 3.0 (для RamDisk и зашифрованных песочниц)
 russian.RefreshBuild=Скачать последние Templates.ini и переводы
 russian.Qt6Win10Unsupported=Фреймворк Qt 6 не поддерживает версии Windows 10 1507, 1511 или 1607.%nПожалуйста, обновитесь до Windows 10 1809 (сборка 17763) или новее.%nСмотрите проблему #5079 для деталей:%nhttps://github.com/sandboxie-plus/Sandboxie/issues/5079%nВы по-прежнему хотите продолжить установку?
 
@@ -531,9 +534,10 @@ ukrainian.ClassicFound=Виявлена версія Sandboxie Classic, на п�
 ukrainian.RunSandboxedMenu=Виконати в пісочниці (&S)
 ukrainian.UninstallTaskLabel1=Оберіть тип видалення
 ukrainian.UninstallTaskLabel2=Як ви хочете видалити Sandboxie-Plus?
-ukrainian.UninstallTaskLabel3=Зберігти файли конфігурації и пісочниць (&K)%nЦе найбільш рекомендований варіант, якщо ви плануете перевстановити Sandboxie-Plus, зберігши файли конфігурації и пісочниць.
+ukrainian.UninstallTaskLabel3=Зберігти файли конфігурації та пісочниць (&K)%nЦе найбільш рекомендований варіант, якщо ви плануєте перевстановити Sandboxie-Plus, зберігши файли конфігурації та пісочниць.
 ukrainian.UninstallTaskLabel4=Видалити файли конфігурації (&C)%nОберіть цей параметр, щоб видалити файли конфігурації Sandboxie.ini та Sandboxie-Plus.ini, залишивши файли пісочниць без змін.
 ukrainian.UninstallTaskLabel5=Видалити файли конфігурації та пісочниць (&S)%nОберіть цей параметр, щоб видалити всі файли конфігурації та пісочниць, включаючи папку Sandbox, яка має місцерозташування в FileRootPath.
+ukrainian.InstallImDisk=Встановити (або оновити) драйвер ImDisk 3.0 (для RamDisk та зашифрованих пісочниць)
 ukrainian.RefreshBuild=Завантажити останні Templates.ini та переклади
 ukrainian.Qt6Win10Unsupported=Фреймворк Qt 6 не підтримує версії Windows 10 1507, 1511 або 1607.%nОновіть до Windows 10 1809 (збірка 17763) або новіше.%nДив. проблему #5079 для деталей:%nhttps://github.com/sandboxie-plus/Sandboxie/issues/5079%nВи все ще хочете продовжити встановлення?
 
@@ -585,3 +589,27 @@ vietnamese.Qt6Win10Unsupported=Khung Qt 6 không hỗ trợ các phiên bản Wi
 ;indonesian.RefreshBuild=Unduh Templates.ini dan terjemahan terbaru
 ;indonesian.InstallImDisk=Instal (atau Perbarui) driver ImDisk 3.0 (untuk RamDisk dan Sandbox Terenkripsi)
 ;indonesian.Qt6Win10Unsupported=Framework Qt 6 tidak mendukung Windows 10 versi 1507, 1511, atau 1607.%nSilakan perbarui ke Windows 10 1809 (build 17763) atau yang lebih baru.%nLihat isu #5079 untuk detail ;selengkapnya:%nhttps://github.com/sandboxie-plus/Sandboxie/issues/5079%nApakah Anda tetap ingin melanjutkan instalasi?
+; Persian
+persian.AddSandboxedMenu=افزودن «اجرا در سندباکس» به منوی کلیک راست
+persian.AddSandboxedBrowser=افزودن میان‌بر دسکتاپ برای اجرای مرورگر وب با Sandboxie
+persian.SandboxieStartMenu1=اجرای هر برنامه‌ای در سندباکس
+persian.SandboxieStartMenu2=اجرای مرورگر وب در سندباکس
+persian.SandboxieStartMenu3=منوی استارت Sandboxie
+persian.SandboxedBrowser=مرورگر وب سندباکس‌شده
+persian.CustomPageLabel1=انتخاب نوع نصب
+persian.CustomPageLabel2=نصب چگونه انجام شود
+persian.CustomPageLabel3=حالت نصب را انتخاب کنید
+persian.CustomPageInstallMode=نصب {#MyAppName} روی این کامپیوتر
+persian.CustomPageUpgradeMode=به‌روزرسانی نصب موجود {#MyAppName}
+persian.CustomPagePortableMode=استخراج همه‌ی فایل‌ها در یک پوشه برای استفاده‌ی پرتابل
+persian.RequiresWin7OrLater=Sandboxie-Plus به ویندوز ۷ یا بالاتر نیاز دارد.
+persian.ClassicFound=نصب Sandboxie Classic شناسایی شد؛ باید ابتدا حذف شود. آیا اکنون می‌خواهید آن را حذف کنید؟
+persian.RunSandboxedMenu=اجرا در &سندباکس
+persian.UninstallTaskLabel1=انتخاب نوع حذف
+persian.UninstallTaskLabel2=چگونه می‌خواهید Sandboxie-Plus را حذف کنید؟
+persian.UninstallTaskLabel3=&نگه‌داشتن فایل‌های پیکربندی و جعبه‌ها%nاین توصیه‌شده‌ترین گزینه است اگر قصد دارید Sandboxie-Plus را دوباره نصب کنید و فایل‌های پیکربندی و جعبه‌هایتان را حفظ کنید.
+persian.UninstallTaskLabel4=حذف فایل‌های &پیکربندی%nاین گزینه را انتخاب کنید تا فایل‌های پیکربندی Sandboxie.ini و Sandboxie-Plus.ini حذف شوند، در حالی که جعبه‌ها بدون تغییر باقی می‌مانند.
+persian.UninstallTaskLabel5=حذف فایل‌های پیکربندی و &جعبه‌ها%nاین گزینه را انتخاب کنید تا همه‌ی فایل‌های پیکربندی و جعبه‌ها حذف شوند، از جمله پوشه‌ی Sandbox که در مسیرهای سفارشی با FileRootPath قرار دارد.
+persian.RefreshBuild=دانلود جدیدترین Templates.ini و ترجمه‌ها
+persian.InstallImDisk=نصب (یا به‌روزرسانی) درایور ImDisk 3.0 (برای RamDisk و جعبه‌های رمزنگاری‌شده)
+persian.Qt6Win10Unsupported=فریم‌ورک Qt 6 از نسخه‌های ۱۵۰۷، ۱۵۱۱ یا ۱۶۰۷ ویندوز ۱۰ پشتیبانی نمی‌کند.%nلطفاً به ویندوز ۱۰ نسخه‌ی ۱۸۰۹ (بیلد ۱۷۷۶۳) یا بالاتر به‌روزرسانی کنید.%nبرای جزئیات به issue شماره‌ی ۵۰۷۹ مراجعه کنید:%nhttps://github.com/sandboxie-plus/Sandboxie/issues/5079%nآیا همچنان می‌خواهید نصب را ادامه دهید؟
